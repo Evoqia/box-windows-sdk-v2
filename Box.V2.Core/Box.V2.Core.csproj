@@ -1,49 +1,52 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <Description>Box.V2 for .Net Core</Description>
-    <AssemblyTitle>Box.V2.Core</AssemblyTitle>
-    <Version>3.22.0</Version>
-    <Authors>Box, Inc.</Authors>
-	<Owners>Box, Inc.</Owners>
-	<PackageProjectUrl>https://github.com/box/box-windows-sdk-v2</PackageProjectUrl>
-  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-	<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-	<PackageDescription>Windows SDK for v2 of the Box API. The SDK is built for .NET Core and includes JWTAuth support.</PackageDescription>
-	<PackageReleaseNotes>See https://github.com/box/box-windows-sdk-v2/blob/master/CHANGELOG.md#3220-2020-02-25</PackageReleaseNotes>
-	<Copyright>Copyright 2020</Copyright>
-	<PackageTags>Box;V2;SDK;Platform;Enterprise;Collaboration;Storage;File Management</PackageTags>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>Box.V2.Core</AssemblyName>
-    <PackageId>Box.V2.Core</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
-    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-  </PropertyGroup>
+    <PropertyGroup>
+        <Description>Box.V2 for .Net Core</Description>
+        <AssemblyTitle>Box.V2.Core</AssemblyTitle>
+        <Version>3.22.0</Version>
+        <Authors>Box, Inc.</Authors>
+        <Owners>Box, Inc.</Owners>
+        <PackageProjectUrl>https://github.com/box/box-windows-sdk-v2</PackageProjectUrl>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageDescription>Windows SDK for v2 of the Box API. The SDK is built for .NET Core and includes JWTAuth support.</PackageDescription>
+        <PackageReleaseNotes>See https://github.com/box/box-windows-sdk-v2/blob/master/CHANGELOG.md#3220-2020-02-25</PackageReleaseNotes>
+        <Copyright>Copyright 2020</Copyright>
+        <PackageTags>Box;V2;SDK;Platform;Enterprise;Collaboration;Storage;File Management</PackageTags>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>Box.V2.Core</AssemblyName>
+        <PackageId>Box.V2.Core</PackageId>
+        <NetStandardImplicitPackageVersion>2.0.0</NetStandardImplicitPackageVersion>
+        <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    </PropertyGroup>
 
-  <PropertyGroup>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;NETSTANDARD1_6</DefineConstants>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <DefineConstants>NETSTANDARD2_0</DefineConstants>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="..\Box.V2\**\*.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\Box.V2\Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Include="..\Box.V2\**\*.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**;..\Box.V2\Properties\AssemblyInfo.cs" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Portable.BouncyCastle" Version="1.8.1.2" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.1.4" />
-    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+        <PackageReference Include="Portable.BouncyCastle" Version="1.8.1.2" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.1.4" />
+        <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+    </ItemGroup>
 
-  <Target Name="PostcompileScript" AfterTargets="Build">
-    <Exec Command="dotnet pack --no-build --configuration $(Configuration)" />
-  </Target>
+    <Target Name="PostcompileScript" AfterTargets="Build">
+        <Exec Command="dotnet pack --no-build --configuration $(Configuration)" />
+    </Target>
 
 </Project>
