@@ -13,7 +13,7 @@
 	<PackageReleaseNotes>See https://github.com/box/box-windows-sdk-v2/blob/master/CHANGELOG.md#3220-2020-02-25</PackageReleaseNotes>
 	<Copyright>Copyright 2020</Copyright>
 	<PackageTags>Box;V2;SDK;Platform;Enterprise;Collaboration;Storage;File Management</PackageTags>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>Box.V2.Core</AssemblyName>
     <PackageId>Box.V2.Core</PackageId>
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
