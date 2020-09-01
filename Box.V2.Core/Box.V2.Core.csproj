@@ -1,27 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <Description>Box.V2 for .Net Core</Description>
-        <AssemblyTitle>Box.V2.Core</AssemblyTitle>
-        <Version>3.22.0</Version>
-        <Authors>Box, Inc.</Authors>
-        <Owners>Box, Inc.</Owners>
-        <PackageProjectUrl>https://github.com/box/box-windows-sdk-v2</PackageProjectUrl>
-        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <PackageDescription>Windows SDK for v2 of the Box API. The SDK is built for .NET Core and includes JWTAuth support.</PackageDescription>
-        <PackageReleaseNotes>See https://github.com/box/box-windows-sdk-v2/blob/master/CHANGELOG.md#3220-2020-02-25</PackageReleaseNotes>
-        <Copyright>Copyright 2020</Copyright>
-        <PackageTags>Box;V2;SDK;Platform;Enterprise;Collaboration;Storage;File Management</PackageTags>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <AssemblyName>Box.V2.Core</AssemblyName>
-        <PackageId>Box.V2.Core</PackageId>
-        <NetStandardImplicitPackageVersion>2.0.0</NetStandardImplicitPackageVersion>
-        <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
-        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    </PropertyGroup>
+  <PropertyGroup>
+    <Description>Box.V2 for .Net Core</Description>
+    <AssemblyTitle>Box.V2.Core</AssemblyTitle>
+    <Version>3.24.0</Version>
+    <Authors>Box, Inc.</Authors>
+	<Owners>Box, Inc.</Owners>
+	<PackageProjectUrl>https://github.com/box/box-windows-sdk-v2</PackageProjectUrl>
+  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+	<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	<PackageDescription>Windows SDK for v2 of the Box API. The SDK is built for .NET Core and includes JWTAuth support.</PackageDescription>
+	<PackageReleaseNotes>See https://github.com/box/box-windows-sdk-v2/blob/master/CHANGELOG.md#3240-2020-07-21</PackageReleaseNotes>
+	<Copyright>Copyright 2020</Copyright>
+	<PackageTags>Box;V2;SDK;Platform;Enterprise;Collaboration;Storage;File Management</PackageTags>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>Box.V2.Core</AssemblyName>
+    <PackageId>Box.V2.Core</PackageId>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
 
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
